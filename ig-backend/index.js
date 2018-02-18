@@ -11,12 +11,16 @@ import {fileLoader, mergeTypes, mergeResolvers} from 'merge-graphql-schemas'
 const typeDefs = mergeTypes(fileLoader(path.join(__dirname, './types')))
 const resolvers = mergeResolvers(fileLoader(path.join(__dirname, './resolvers')))
 mongoose.Promise = global.Promise
+import cors from 'cors'
 
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers
 })
 const app = express()
+app.use(cors({
+  origin:['http://localhost:3001']
+}))
 const PORT = 3000
 
 app.use(
