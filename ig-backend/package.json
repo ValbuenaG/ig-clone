@@ -1,0 +1,25 @@
+{
+  "name": "ig-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js --exec babel-node"
+  },
+  "author": "gustt <valbuena52@gmail.com> (https://twitter.com/valbuenag_)",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server-express": "^1.3.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "graphql": "^0.13.1",
+    "graphql-tools": "^2.21.0",
+    "merge-graphql-schemas": "^1.4.0",
+    "mongoose": "^5.0.6",
+    "nodemon": "^1.15.0",
+    "path": "^0.12.7"
+  }
+}
